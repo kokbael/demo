@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "623339809707",
+    "project_id": "korea-platform-sijum-1",
+    "storage_bucket": "korea-platform-sijum-1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:623339809707:android:4d8b9999580c80782c00ee",
+        "android_client_info": {
+          "package_name": "com.example.demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "623339809707-ocuohbci5s4jip3hjok4ga4sof64r27r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwFvPOUQGJSIKPiCVawQj4sHbjFplPApI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "623339809707-ocuohbci5s4jip3hjok4ga4sof64r27r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
