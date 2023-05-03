@@ -2,6 +2,7 @@ import 'package:demo/banner.dart';
 import 'package:demo/controller/auth_controller.dart';
 import 'package:demo/loginPage.dart';
 import 'package:demo/mainList.dart';
+import 'package:demo/management/productRegistration.dart';
 import 'package:demo/marketCard.dart';
 import 'package:demo/minibanner.dart';
 import 'package:flutter/material.dart';
@@ -177,7 +178,7 @@ class _MyAppState extends State<MyApp> {
         ),
       ),
       bottomNavigationBar:
-          BottomNavigationBar(currentIndex: 1, selectedItemColor: Colors.black, items: const [
+          BottomNavigationBar(currentIndex: 1, selectedItemColor: Colors.black, items: [
         BottomNavigationBarItem(
           label: '카테고리', // 상단 바와 중복이라 없어도 될 듯
           icon: Icon(
@@ -192,8 +193,9 @@ class _MyAppState extends State<MyApp> {
         ),
         BottomNavigationBarItem(
           label: '주문/배송',
-          icon: Icon(
-            Icons.fire_truck_outlined,
+          icon: IconButton(
+            onPressed: () => Get.to(() => ProductRegistration()),
+            icon: Icon(Icons.fire_truck_outlined),
           ),
         ),
       ]),

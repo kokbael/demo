@@ -10,8 +10,7 @@ class MyPage extends StatelessWidget {
     return Container(
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
-            border: Border(
-                bottom: BorderSide(width: 1.0, color: Colors.grey.shade200))));
+            border: Border(bottom: BorderSide(width: 1.0, color: Colors.grey.shade200))));
   }
 
   @override
@@ -112,9 +111,7 @@ class MyPage extends StatelessWidget {
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  SizedBox(
-                                      height: 60,
-                                      child: Image.asset('assets/qrcode.png')),
+                                  SizedBox(height: 60, child: Image.asset('assets/qrcode.png')),
                                   Text('QR 스캔'),
                                 ],
                               ),
@@ -173,8 +170,7 @@ class MyPage extends StatelessWidget {
                                 onPressed: () {},
                                 child: Text(
                                   '주문내역',
-                                  style: TextStyle(
-                                      color: Colors.black, fontSize: 20),
+                                  style: TextStyle(color: Colors.black, fontSize: 20),
                                 ),
                               ),
                             ),
@@ -185,8 +181,7 @@ class MyPage extends StatelessWidget {
                                 onPressed: () {},
                                 child: Text(
                                   '찜 리스트',
-                                  style: TextStyle(
-                                      color: Colors.black, fontSize: 20),
+                                  style: TextStyle(color: Colors.black, fontSize: 20),
                                 ),
                               ),
                             ),
@@ -197,8 +192,7 @@ class MyPage extends StatelessWidget {
                                 onPressed: () {},
                                 child: Text(
                                   '보유쿠폰',
-                                  style: TextStyle(
-                                      color: Colors.black, fontSize: 20),
+                                  style: TextStyle(color: Colors.black, fontSize: 20),
                                 ),
                               ),
                             ),
@@ -209,8 +203,7 @@ class MyPage extends StatelessWidget {
                                 onPressed: () {},
                                 child: Text(
                                   '고객지원',
-                                  style: TextStyle(
-                                      color: Colors.black, fontSize: 20),
+                                  style: TextStyle(color: Colors.black, fontSize: 20),
                                 ),
                               ),
                             ),
@@ -221,8 +214,7 @@ class MyPage extends StatelessWidget {
                                 onPressed: () {},
                                 child: Text(
                                   '이용약관',
-                                  style: TextStyle(
-                                      color: Colors.black, fontSize: 20),
+                                  style: TextStyle(color: Colors.black, fontSize: 20),
                                 ),
                               ),
                             ),
