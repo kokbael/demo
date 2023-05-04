@@ -94,7 +94,7 @@ class MyPage extends StatelessWidget {
                       Row(
                         children: [
                           Flexible(
-                            flex: 10,
+                            flex: 8,
                             child: Container(
                               height: 100,
                               width: MediaQuery.of(context).size.width,
@@ -108,18 +108,26 @@ class MyPage extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(12),
                               ),
 
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  SizedBox(height: 60, child: Image.asset('assets/qrcode.png')),
-                                  Text('QR 스캔'),
-                                ],
+                              child: Padding(
+                                padding: const EdgeInsets.all(10.0),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    SizedBox(
+                                        height: 40, child: Image.asset('assets/qrcode_new4.jpg')),
+                                    SizedBox(height: 10),
+                                    Text(
+                                      'QR 스캔',
+                                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                           ),
                           Spacer(),
                           Flexible(
-                            flex: 10,
+                            flex: 8,
                             child: Container(
                               height: 100,
                               width: MediaQuery.of(context).size.width,
@@ -132,19 +140,36 @@ class MyPage extends StatelessWidget {
                                 ),
                                 borderRadius: BorderRadius.circular(12),
                               ),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: const [
-                                  SizedBox(
-                                    height: 60,
-                                    child: Center(
-                                        child: Text(
-                                      '0 P',
-                                      style: TextStyle(fontSize: 20),
-                                    )),
-                                  ),
-                                  Text('포인트'),
-                                ],
+                              child: Padding(
+                                padding: const EdgeInsets.all(10.0),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    SizedBox(
+                                      height: 40,
+                                      child: Center(
+                                          child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: const [
+                                          Text(
+                                            '0',
+                                            style: TextStyle(
+                                                fontSize: 24, fontWeight: FontWeight.w700),
+                                          ),
+                                          Text(
+                                            '  P',
+                                            style: TextStyle(fontSize: 18),
+                                          ),
+                                        ],
+                                      )),
+                                    ),
+                                    SizedBox(height: 10),
+                                    Text(
+                                      '포인트',
+                                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                           ),
