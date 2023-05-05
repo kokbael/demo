@@ -4,6 +4,7 @@ import 'package:demo/loginPage.dart';
 import 'package:demo/mainList.dart';
 import 'package:demo/management/productRegistration.dart';
 import 'package:demo/marketCard.dart';
+import 'package:demo/marketCity.dart';
 import 'package:demo/minibanner.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -82,91 +83,94 @@ class _MyAppState extends State<MyApp> {
             //   ),
             // ),
             SlideBanner(),
-            Container(
-              height: 120,
-              width: MediaQuery.of(context).size.width,
-              color: Colors.white,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  InkWell(
-                    onTap: () => Get.to(
-                      MarketMainPage(),
-                      transition: Transition.cupertino,
-                    ),
-                    child: Container(
-                      width: MediaQuery.of(context).size.width / 6,
-                      // color: Colors.black,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset('assets/hanbok.png'),
-                          SizedBox(height: 5),
-                          Text(
-                            '문화상품',
-                            style: TextStyle(fontSize: 12),
-                          ),
-                        ],
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 20),
+              child: SizedBox(
+                width: MediaQuery.of(context).size.width,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    InkWell(
+                      onTap: () => Get.to(
+                        MarketMainPage(),
+                        transition: Transition.cupertino,
+                      ),
+                      child: SizedBox(
+                        width: MediaQuery.of(context).size.width / 6,
+                        // color: Colors.black,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset('assets/hanbok.png'),
+                            SizedBox(height: 5),
+                            Text(
+                              '문화상품',
+                              style: TextStyle(fontSize: 12),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                  InkWell(
-                    onTap: () {},
-                    child: SizedBox(
-                      width: MediaQuery.of(context).size.width / 6,
-                      // color: Colors.black,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset('assets/tteok.png'),
-                          SizedBox(height: 5),
-                          Text(
-                            '전통시장',
-                            style: TextStyle(fontSize: 12),
-                          ),
-                        ],
+                    InkWell(
+                      onTap: () {
+                        Get.to(() => MarketCity());
+                      },
+                      child: SizedBox(
+                        width: MediaQuery.of(context).size.width / 6,
+                        // color: Colors.black,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset('assets/tteok.png'),
+                            SizedBox(height: 5),
+                            Text(
+                              '전통시장',
+                              style: TextStyle(fontSize: 12),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                  InkWell(
-                    onTap: () {},
-                    child: SizedBox(
-                      width: MediaQuery.of(context).size.width / 6,
-                      // color: Colors.black,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset('assets/hanok.png'),
-                          SizedBox(height: 5),
-                          Text(
-                            '한옥숙소',
-                            style: TextStyle(fontSize: 12),
-                          ),
-                        ],
+                    InkWell(
+                      onTap: () {},
+                      child: SizedBox(
+                        width: MediaQuery.of(context).size.width / 6,
+                        // color: Colors.black,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset('assets/hanok.png'),
+                            SizedBox(height: 5),
+                            Text(
+                              '한옥숙소',
+                              style: TextStyle(fontSize: 12),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                  InkWell(
-                    onTap: () {
-                      Get.to(EventMainPage());
-                    },
-                    child: SizedBox(
-                      width: MediaQuery.of(context).size.width / 6,
-                      // color: Colors.black,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset('assets/festival.png'),
-                          SizedBox(height: 5),
-                          Text(
-                            '체험/행사',
-                            style: TextStyle(fontSize: 12),
-                          ),
-                        ],
+                    InkWell(
+                      onTap: () {
+                        Get.to(EventMainPage());
+                      },
+                      child: SizedBox(
+                        width: MediaQuery.of(context).size.width / 6,
+                        // color: Colors.black,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset('assets/festival.png'),
+                            SizedBox(height: 5),
+                            Text(
+                              '체험/행사',
+                              style: TextStyle(fontSize: 12),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
             MiniBanner(),

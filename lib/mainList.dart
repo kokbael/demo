@@ -30,13 +30,11 @@ class MainList extends StatelessWidget {
               children: [
                 SizedBox(
                   width: MediaQuery.of(context).size.width / 2.2,
-                  height: 250,
+                  // height: 280,
                   child: InkWell(
                     onTap: () {
                       Navigator.push(
-                          context,
-                          CupertinoPageRoute(
-                              builder: (context) => ClothesDetailPage()));
+                          context, CupertinoPageRoute(builder: (context) => ClothesDetailPage()));
                     },
                     child: Column(
                       // mainAxisAlignment: MainAxisAlignment.center,
@@ -48,21 +46,18 @@ class MainList extends StatelessWidget {
                           children: [
                             Text(
                               '화이트 스니커즈',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w600, fontSize: 14),
+                              style: TextStyle(fontWeight: FontWeight.w600, fontSize: 14),
                             ),
                             SizedBox(height: 5),
                             Container(
                                 width: MediaQuery.of(context).size.width / 2.2,
                                 decoration: BoxDecoration(
                                     border: Border(
-                                        bottom: BorderSide(
-                                            width: 1.0,
-                                            color: Colors.grey.shade300)))),
+                                        bottom:
+                                            BorderSide(width: 1.0, color: Colors.grey.shade300)))),
                             SizedBox(height: 5),
                             Text('78,000원',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w600, fontSize: 16)),
+                                style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16)),
                           ],
                         ),
                       ],
@@ -82,19 +77,16 @@ class MainList extends StatelessWidget {
   Column itemSet(SizedBox item1, SizedBox item2) {
     return Column(
       children: [
-        Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [item1, item2]),
+        Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [item1, item2]),
         SizedBox(height: 20)
       ],
     );
   }
 
-  SizedBox item(
-      BuildContext context, String itemImage, String itemName, String cost) {
+  SizedBox item(BuildContext context, String itemImage, String itemName, String cost) {
     return SizedBox(
       width: MediaQuery.of(context).size.width / 2.2,
-      height: 250,
+      // height: 280,
       child: Column(
         // mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -111,12 +103,9 @@ class MainList extends StatelessWidget {
               Container(
                   width: MediaQuery.of(context).size.width / 2.2,
                   decoration: BoxDecoration(
-                      border: Border(
-                          bottom: BorderSide(
-                              width: 1.0, color: Colors.grey.shade300)))),
+                      border: Border(bottom: BorderSide(width: 1.0, color: Colors.grey.shade300)))),
               SizedBox(height: 5),
-              Text(cost,
-                  style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16)),
+              Text(cost, style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16)),
             ],
           ),
         ],
