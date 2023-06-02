@@ -3,8 +3,10 @@ import 'package:demo/renderTextFormField.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'controller/auth_controller.dart';
+import '../controller/auth_controller.dart';
 import 'package:kpostal/kpostal.dart';
+
+import '../sideMenu.dart';
 
 //이용약관도 넣어야함
 class SignUpPage extends StatefulWidget {
@@ -50,7 +52,9 @@ class _SignUpPageState extends State<SignUpPage> {
         _unFocus();
       },
       child: Scaffold(
+        drawer: SideMenu(),
         appBar: AppBar(
+          iconTheme: IconThemeData(color: Colors.black),
           title: Text(
             '회원가입',
             style: TextStyle(
@@ -60,10 +64,6 @@ class _SignUpPageState extends State<SignUpPage> {
           centerTitle: true,
           backgroundColor: Colors.white,
           elevation: 0,
-          leading: IconButton(
-            icon: Icon(Icons.menu, color: Colors.black),
-            onPressed: () {},
-          ),
         ),
         body: SingleChildScrollView(
           child: Form(

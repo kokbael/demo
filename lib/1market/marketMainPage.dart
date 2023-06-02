@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../sideMenu.dart';
 import 'marketList.dart';
 
 class MarketMainPage extends StatelessWidget {
@@ -8,7 +9,9 @@ class MarketMainPage extends StatelessWidget {
   Widget build(BuildContext context) {
     double _width = MediaQuery.of(context).size.width;
     return Scaffold(
+      drawer: SideMenu(),
       appBar: AppBar(
+          iconTheme: IconThemeData(color: Colors.black),
           title: Text(
             '', //'한복',
             style: TextStyle(
@@ -18,10 +21,6 @@ class MarketMainPage extends StatelessWidget {
           centerTitle: true,
           backgroundColor: Colors.white,
           elevation: 0,
-          leading: IconButton(
-            icon: Icon(Icons.menu, color: Colors.black),
-            onPressed: () {},
-          ),
           actions: [
             IconButton(
               icon: Icon(Icons.shopping_cart_outlined, color: Colors.black),

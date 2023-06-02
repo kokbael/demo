@@ -6,8 +6,7 @@ import 'package:get/get.dart';
 
 class FireStoreController extends GetxController {
   static FireStoreController instance = Get.find();
-  CollectionReference collection =
-      FirebaseFirestore.instance.collection('User');
+  CollectionReference collection = FirebaseFirestore.instance.collection('User');
   FirebaseAuth authentication = FirebaseAuth.instance;
 
   RxString Email = ''.obs;
@@ -22,6 +21,7 @@ class FireStoreController extends GetxController {
     _getDocData();
   }
 
+  // 이것들 로컬에 저장??
   void _getDocData() {
     if (authentication.currentUser != null) {
       collection.doc(authentication.currentUser!.uid).get().then((doc) {

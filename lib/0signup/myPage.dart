@@ -4,6 +4,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../sideMenu.dart';
+
 class MyPage extends StatelessWidget {
   const MyPage({Key? key}) : super(key: key);
   Container _border(BuildContext context) {
@@ -21,7 +23,9 @@ class MyPage extends StatelessWidget {
         dispose: (state) => state.controller?.onClose(),
         builder: (controller) {
           return Scaffold(
+            drawer: SideMenu(),
             appBar: AppBar(
+              iconTheme: IconThemeData(color: Colors.black),
               title: Text(
                 '마이페이지',
                 style: TextStyle(
@@ -31,10 +35,6 @@ class MyPage extends StatelessWidget {
               centerTitle: true,
               backgroundColor: Colors.white,
               elevation: 0,
-              leading: IconButton(
-                icon: Icon(Icons.menu, color: Colors.black),
-                onPressed: () {},
-              ),
               actions: [
                 IconButton(
                   onPressed: () {},

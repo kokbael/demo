@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../renderTextFormField.dart';
+import '../sideMenu.dart';
 
 class ProductRegistration extends StatefulWidget {
   const ProductRegistration({Key? key}) : super(key: key);
@@ -20,7 +21,9 @@ class _ProductRegistrationState extends State<ProductRegistration> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.grey.shade200,
+        drawer: SideMenu(),
         appBar: AppBar(
+            iconTheme: IconThemeData(color: Colors.black),
             title: Text('상품등록',
                 style: TextStyle(
                   color: Colors.black,
@@ -28,10 +31,6 @@ class _ProductRegistrationState extends State<ProductRegistration> {
             centerTitle: true,
             backgroundColor: Colors.white,
             elevation: 0,
-            leading: IconButton(
-              icon: Icon(Icons.menu, color: Colors.black),
-              onPressed: () {},
-            ),
             actions: [
               IconButton(
                 icon: Icon(Icons.person_outline, color: Colors.black),

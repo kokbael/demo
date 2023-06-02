@@ -1,7 +1,8 @@
-import 'package:demo/signUpPage.dart';
+import 'package:demo/0signup/signUpPage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'controller/auth_controller.dart';
+import '../controller/auth_controller.dart';
+import '../sideMenu.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -16,7 +17,9 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: SideMenu(),
       appBar: AppBar(
+        iconTheme: IconThemeData(color: Colors.black),
         title: Text(
           '로그인',
           style: TextStyle(
@@ -26,10 +29,6 @@ class _LoginPageState extends State<LoginPage> {
         centerTitle: true,
         backgroundColor: Colors.white,
         elevation: 0,
-        leading: IconButton(
-          icon: Icon(Icons.menu, color: Colors.black),
-          onPressed: () {},
-        ),
       ),
       body: Center(
         child: SingleChildScrollView(

@@ -9,8 +9,7 @@ class MarketCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.push(context,
-            CupertinoPageRoute(builder: (context) => MarketMainPage()));
+        Navigator.push(context, CupertinoPageRoute(builder: (context) => MarketMainPage()));
       },
       child: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -100,8 +99,7 @@ class MarketCard extends StatelessWidget {
                     children: const [
                       Text(
                         '햇살고운한복',
-                        style: TextStyle(
-                            fontSize: 16, fontWeight: FontWeight.w700),
+                        style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
                       ),
                       SizedBox(height: 8),
                       Text(

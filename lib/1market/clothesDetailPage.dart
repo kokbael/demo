@@ -1,5 +1,7 @@
-import 'package:demo/imageDetailSlider.dart';
+import 'package:demo/1market/imageDetailSlider.dart';
 import 'package:flutter/material.dart';
+
+import '../sideMenu.dart';
 
 class ClothesDetailPage extends StatelessWidget {
   const ClothesDetailPage({Key? key}) : super(key: key);
@@ -8,7 +10,9 @@ class ClothesDetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     double _itemWidth = MediaQuery.of(context).size.width;
     return Scaffold(
+      drawer: SideMenu(),
       appBar: AppBar(
+          iconTheme: IconThemeData(color: Colors.black),
           title: Text('',
               style: TextStyle(
                 color: Colors.black,
@@ -16,10 +20,6 @@ class ClothesDetailPage extends StatelessWidget {
           centerTitle: true,
           backgroundColor: Colors.white,
           elevation: 0,
-          leading: IconButton(
-            icon: Icon(Icons.menu, color: Colors.black),
-            onPressed: () {},
-          ),
           actions: [
             IconButton(
               icon: Icon(Icons.shopping_cart_outlined, color: Colors.black),
@@ -48,13 +48,10 @@ class ClothesDetailPage extends StatelessWidget {
                   Container(
                       width: _itemWidth,
                       decoration: BoxDecoration(
-                          border: Border(
-                              bottom: BorderSide(
-                                  width: 1.0, color: Colors.grey.shade300)))),
+                          border:
+                              Border(bottom: BorderSide(width: 1.0, color: Colors.grey.shade300)))),
                   SizedBox(height: 10),
-                  Text('78,000원',
-                      style:
-                          TextStyle(fontWeight: FontWeight.w500, fontSize: 16)),
+                  Text('78,000원', style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16)),
                   SizedBox(
                     height: 15,
                   ),
@@ -69,9 +66,7 @@ class ClothesDetailPage extends StatelessWidget {
                             child: Text(
                               '바로구매',
                               style: TextStyle(
-                                  fontSize: 17,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w700),
+                                  fontSize: 17, color: Colors.white, fontWeight: FontWeight.w700),
                             ),
                           ),
                         ),
@@ -87,9 +82,7 @@ class ClothesDetailPage extends StatelessWidget {
                             child: Text(
                               '장바구니',
                               style: TextStyle(
-                                  fontSize: 17,
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.w500),
+                                  fontSize: 17, color: Colors.black, fontWeight: FontWeight.w500),
                             ),
                           ),
                         ),
@@ -104,9 +97,7 @@ class ClothesDetailPage extends StatelessWidget {
                             child: Text(
                               '관심상품',
                               style: TextStyle(
-                                  fontSize: 17,
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.w500),
+                                  fontSize: 17, color: Colors.black, fontWeight: FontWeight.w500),
                             ),
                           ),
                         ),

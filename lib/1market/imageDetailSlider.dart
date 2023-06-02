@@ -33,9 +33,10 @@ class _SlideBannerState extends State<ImageDetailSlider> {
       children: [
         CarouselSlider(
           options: CarouselOptions(
+            padEnds: false,
             // autoPlay: true,
             // autoPlayInterval: Duration(seconds: 3),
-            height: 400,
+            height: 300,
             onPageChanged: (index, reason) {
               setState(() {
                 _sliderNumber = index + 1;

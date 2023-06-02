@@ -1,9 +1,8 @@
-import 'package:demo/myPage.dart';
 import 'package:get/get.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-
-import '../loginPage.dart';
+import '../0signup/loginPage.dart';
+import '../0signup/myPage.dart';
 
 class AuthController extends GetxController {
   static AuthController instance = Get.find();

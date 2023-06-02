@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MarketList extends StatelessWidget {
@@ -32,13 +31,18 @@ class MarketList extends StatelessWidget {
             item(context, 'assets/item5.jpg', '고급 젓가락', '28,000원'),
             item(context, 'assets/item6.jpg', '나전칠기 책갈피', '28,000원'),
           ),
-          SizedBox(height: 40),
+          SizedBox(height: 20),
+          Container(
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(
+                  border: Border(bottom: BorderSide(width: 1.0, color: Colors.grey.shade300)))),
+          SizedBox(height: 20),
           Text(
             '관련 상품을 둘러보세요.',
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
           ),
           SizedBox(height: 20),
-          Container(
+          SizedBox(
             height: 270,
             child: ListView.builder(
                 physics: BouncingScrollPhysics(),
@@ -71,12 +75,6 @@ class MarketList extends StatelessWidget {
 
 
 
-
-
-
-
-
-
   */
   Column itemSet(SizedBox item1, SizedBox item2) {
     return Column(
@@ -90,8 +88,7 @@ class MarketList extends StatelessWidget {
     );
   }
 
-  SizedBox item(
-      BuildContext context, String itemImage, String itemName, String cost) {
+  SizedBox item(BuildContext context, String itemImage, String itemName, String cost) {
     return SizedBox(
       width: MediaQuery.of(context).size.width / 2.2,
       height: 250,
@@ -115,12 +112,9 @@ class MarketList extends StatelessWidget {
               Container(
                   width: MediaQuery.of(context).size.width / 2.2,
                   decoration: BoxDecoration(
-                      border: Border(
-                          bottom: BorderSide(
-                              width: 1.0, color: Colors.grey.shade300)))),
+                      border: Border(bottom: BorderSide(width: 1.0, color: Colors.grey.shade300)))),
               SizedBox(height: 5),
-              Text(cost,
-                  style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16)),
+              Text(cost, style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16)),
             ],
           ),
         ],

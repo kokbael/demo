@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'clothesDetailPage.dart';
+import '1market/clothesDetailPage.dart';
 
 class MainList extends StatelessWidget {
   const MainList({Key? key}) : super(key: key);
